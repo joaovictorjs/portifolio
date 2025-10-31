@@ -1,9 +1,9 @@
 import type { Repository } from "../types/repository";
 
-const endpoint = "https://api.github.com/users/joaovictorjs/repos";
+const ENDPOINT = "https://api.github.com/users/joaovictorjs/repos";
 
-export async function getRepositories(): Promise<Repository[]> {
-  const response = await fetch(endpoint);
+export async function fetchRepositories(): Promise<Repository[]> {
+  const response = await fetch(ENDPOINT);
   if (!response.ok)
     throw new Error(
       "Something went wrong while getting repositories from github..."
