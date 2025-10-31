@@ -4,12 +4,14 @@ const ENDPOINT = "https://api.github.com/users/joaovictorjs/repos";
 
 export async function fetchRepositories(): Promise<Repository[]> {
   const response = await fetch(ENDPOINT);
+
   if (!response.ok)
     throw new Error(
       "Something went wrong while getting repositories from github..."
     );
+
   const data = await response.json();
-  return data.map((repo: Repository) => ({
+  const repositories = data.map((repo: Repository) => ({
     name: repo.name,
     fork: repo.fork,
     url: repo.url,
@@ -17,4 +19,6 @@ export async function fetchRepositories(): Promise<Repository[]> {
     description: repo.description,
     language: repo.language,
   }));
+
+  return repositories;
 }
