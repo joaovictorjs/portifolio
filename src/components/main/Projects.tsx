@@ -9,26 +9,22 @@ export default function Projects() {
   const [repositories, setRepositories] = useState<Repository[]>([]);
   const [error, setError] = useState<string>();
 
-  console.log("Hello");
+  const getRepositoriesAsync = async () => {
+    setIsLoading(true);
+
+    try {
+      const repos = await getRepositories();
+      setRepositories(repos);
+    } catch (exception: unknown) {
+      if (exception instanceof Error) {
+        setError(exception.message);
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
-    if (isLoading === false) {
-      setIsLoading(true);
-    }
-
-    const getRepositoriesAsync = async () => {
-      try {
-        const repos = await getRepositories();
-        setRepositories(repos);
-      } catch (exception: unknown) {
-        if (exception instanceof Error) {
-          setError(exception.message);
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
     getRepositoriesAsync();
   }, []);
 
@@ -39,21 +35,18 @@ export default function Projects() {
     >
       {error ? (
         <strong className="w-full text-center text-red-500">{error}</strong>
-      ) : (
-        <>
-          {isLoading ? (
-            <Spinner />
-          ) : (
-            <>
-              <p className="text-neutral-500">Projetos</p>
+      ) : null}
 
-              {repositories.map((repo) => (
-                <RepositoryItem key={repo.name} {...repo} />
-              ))}
-            </>
-          )}
+      {isLoading && !error ? <Spinner /> : null}
+
+      {!isLoading && !error ? (
+        <>
+          <p className="text-neutral-500">Projetos</p>
+          {repositories.map((repo) => (
+            <RepositoryItem key={repo.name} {...repo} />
+          ))}{" "}
         </>
-      )}
+      ) : null}
     </section>
   );
 }
