@@ -4,6 +4,7 @@ export default function About() {
       id="about"
       className="flex flex-col gap-2 border-l-2 border-l-green-300 pl-4"
     >
+      <p className="text-neutral-500">Sobre</p>
       <h4>Desenvolvedor Fullstack</h4>
       <p className="text-neutral-500">
         Sou um profissional apaixonado pela área de tecnologia, atualmente estou
