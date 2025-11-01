@@ -6,12 +6,12 @@ export default function Header() {
 
       <nav className="flex flex-row py-4">
         <a href="#about" className="anchor-button">
-          About
+          Sobre
         </a>
         <a href="#projects" className="anchor-button">
-          Projects
+          Projetos
         </a>
-        <a href="#github" className="anchor-button">
+        <a href="https://github.com/joaovictorjs" className="anchor-button">
           Github
         </a>
       </nav>
