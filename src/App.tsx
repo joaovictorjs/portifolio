@@ -1,5 +1,14 @@
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <div className="flex flex-col">
+      <Header />
+      <main />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
