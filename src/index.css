@@ -25,11 +25,11 @@
   }
 
   body {
-    @apply h-dvh w-dvw;
+    @apply h-dvh w-dvw dark:bg-neutral-950 dark:text-neutral-100;
   }
 
   #root {
-    @apply h-full w-full dark:bg-neutral-950 dark:text-neutral-100;
+    @apply h-full w-full;
   }
 
   h1,
