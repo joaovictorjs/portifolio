@@ -1,8 +1,6 @@
 export interface Repository {
   name: string;
-  fork: boolean;
-  url: string;
-  created_at: string;
+  html_url: string;
   description?: string;
   language?: string;
 }

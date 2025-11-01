@@ -7,15 +7,13 @@ export async function fetchRepositories(): Promise<Repository[]> {
 
   if (!response.ok)
     throw new Error(
-      "Something went wrong while getting repositories from github..."
+      "Something went wrong while getting repositories from github...",
     );
 
   const data = await response.json();
   const repositories = data.map((repo: Repository) => ({
     name: repo.name,
-    fork: repo.fork,
-    url: repo.url,
-    created_at: repo.created_at,
+    html_url: repo.html_url,
     description: repo.description,
     language: repo.language,
   }));
