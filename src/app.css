@@ -18,6 +18,18 @@
   --text-7xl: 3.75rem;
   --text-8xl: 4.5rem;
   --text-9xl: 6rem;
+
+  --animate-blink: blink 1s step-start infinite;
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 @layer base {
@@ -67,7 +79,7 @@
   }
 
   p {
-    @apply text-base;
+    @apply text-base text-neutral-500;
   }
 
   small {
