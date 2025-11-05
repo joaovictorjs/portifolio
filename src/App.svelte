@@ -13,7 +13,6 @@
     branch="main"
     showCursor={true}
   />
-
   <TerminalOutput label="[ABOUT ME]">
     <AboutMe />
   </TerminalOutput>

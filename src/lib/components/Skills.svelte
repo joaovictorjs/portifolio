@@ -34,9 +34,7 @@
   class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] items-stretch gap-4"
 >
   {#each skills as skill}
-    <div
-      class="p-4 flex h-full flex-col gap-4 border border-neutral-500 bg-neutral-800 motion-safe:hover:-translate-y-2 transition-transform hover:border-neutral-300"
-    >
+    <div class="card">
       <h6>{skill.name}</h6>
 
       <div class="flex flex-row flex-wrap gap-1">

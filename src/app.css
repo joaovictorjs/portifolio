@@ -90,3 +90,9 @@
     @apply text-sm;
   }
 }
+
+@layer components {
+  .card {
+    @apply flex h-full flex-col gap-4 border border-neutral-500 bg-neutral-800 p-4 transition-transform hover:border-neutral-300 motion-safe:hover:-translate-y-2;
+  }
+}
