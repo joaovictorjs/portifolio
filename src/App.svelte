@@ -7,7 +7,9 @@
   import Links from "./lib/components/Links.svelte";
 </script>
 
-<div class="flex flex-col p-4">
+<div
+  class="flex flex-col p-4 w-full sm:max-w-4/5 absolute left-1/2 -translate-x-1/2 md:max-w-3/4 lg:max-w-1/2"
+>
   <TerminalPrompt location="joao@pc: ~/" command="cd ./portifolio" />
   <TerminalPrompt
     location="joao@pc: ~/portifolio"
