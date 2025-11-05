@@ -22,7 +22,12 @@
     <p>Loading...</p>
   {:else}
     {#each repositories as repo}
-      <a class="card" href={repo.html_url}>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card"
+        href={repo.html_url}
+      >
         <h6>{"💻 " + repo.name}</h6>
 
         {#if repo.language}
