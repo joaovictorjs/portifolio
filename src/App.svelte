@@ -4,6 +4,7 @@
   import AboutMe from "./lib/components/AboutMe.svelte";
   import Skills from "./lib/components/Skills.svelte";
   import Projects from "./lib/components/Projects.svelte";
+  import Links from "./lib/components/Links.svelte";
 </script>
 
 <div class="flex flex-col p-4">
@@ -34,5 +35,14 @@
   />
   <TerminalOutput label="[PROJECTS]">
     <Projects />
+  </TerminalOutput>
+
+  <TerminalPrompt
+    location="joao@pc: ~/portifolio"
+    command="cat links.txt"
+    branch="main"
+  />
+  <TerminalOutput label="[LINKS]">
+    <Links />
   </TerminalOutput>
 </div>
