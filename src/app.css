@@ -38,7 +38,7 @@
   }
 
   body {
-    @apply h-dvh w-dvw bg-neutral-900 text-neutral-50;
+    @apply h-dvh w-dvw overflow-x-hidden bg-neutral-900 text-neutral-50;
   }
 
   #app {
