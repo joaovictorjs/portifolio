@@ -82,6 +82,10 @@
     @apply text-base text-neutral-500;
   }
 
+  pre {
+    @apply text-base;
+  }
+
   small {
     @apply text-sm;
   }
