@@ -30,9 +30,7 @@
   ];
 </script>
 
-<div
-  class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] items-stretch gap-4"
->
+<div class="grid-auto-fit-sm">
   {#each skills as skill}
     <div class="card">
       <h6>{skill.name}</h6>

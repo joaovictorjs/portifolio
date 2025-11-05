@@ -15,9 +15,7 @@
   });
 </script>
 
-<div
-  class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-stretch gap-4"
->
+<div class="grid-auto-fit-md">
   {#if isLoading}
     <p>Loading...</p>
   {:else}

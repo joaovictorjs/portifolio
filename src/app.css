@@ -95,4 +95,12 @@
   .card {
     @apply flex h-full flex-col gap-4 border border-neutral-500 bg-neutral-800 p-4 transition-transform hover:border-neutral-300 motion-safe:hover:-translate-y-2;
   }
+
+  .grid-auto-fit-sm {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4;
+  }
+
+  .grid-auto-fit-md {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4;
+  }
 }
